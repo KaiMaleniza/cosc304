@@ -57,10 +57,11 @@ def list_products():
                 safe_id = escape_html(str(prod_id))
                 safe_name = escape_html(str(prod_name))
                 formatted_price = format_currency(prod_price)
+                product_url = url_for("product.product_details", id=prod_id)
 
                 content += "<tr>"
                 content += f"<td>{safe_id}</td>"
-                content += f"<td>{safe_name}</td>"
+                content += f'<td><a href="{escape_html(product_url)}">{safe_name}</a></td>'
                 content += f"<td>{formatted_price}</td>"
                 content += f'<td><a href="{cart_url}">Add to Cart</a></td>'
                 content += "</tr>"
