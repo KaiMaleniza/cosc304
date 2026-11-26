@@ -1,5 +1,5 @@
 docker compose up -d --build
 docker compose ps
-docker compose down    
+docker compose down
 
- http://localhost/
+http://localhost/
